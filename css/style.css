@@ -2,6 +2,8 @@
 
 header, #visual{ display: block; }
 
+
+
 *{ margin: 0; padding: 0; }
 body{ 
     color:#1e1e20;
@@ -20,7 +22,7 @@ li{ list-style:none; float: left; }
 img{ border:none; }
 table{ border-collapse: collapse; }
 
-behavior: url('../css/PIE.htc');
+
 
 /*       header 부분     */
 #header{
@@ -440,3 +442,4 @@ behavior: url('../css/PIE.htc');
     display:block;
     clear:both; 
 }
+behavior: url('../css/PIE.htc');
