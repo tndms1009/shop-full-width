@@ -52,6 +52,15 @@ $(function(){
           $('.flex-control-paging li a').each(function() {
              PIE.attach(this);
            });
+           $('.round1').each(function() {
+             PIE.attach(this);
+           });
+           $('.round2').each(function() {
+             PIE.attach(this);
+           });
+           $('.round3').each(function() {
+             PIE.attach(this);
+           });
       }
     });
 
