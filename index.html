@@ -1,0 +1,323 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+  <title> new document </title>
+  <meta name="viewport" content="width=device-width , initial-scale=1.0 , maxmum-scale=1.0 , minimum-scale=1.0" />
+  <meta name="format-detection" content="telephone=no"/>
+  <link rel="stylesheet" type="text/css" href="css/style.css"/>
+  <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css' />
+ <!-- ie 8, 7 지원 -->
+  <!-- 사이트 : http://cdnjs.com/libraries/html5shiv/ -->
+  <!--[if lt IE 9]>
+<script type="text/javascript" src="/js/placeholder.js"></script>
+<![endif]-->
+<script type="text/javascript">
+    
+    $(function(){
+        $("#search").attr('placeholder','Enter Search...');
+        
+        var placeholder = $("input[placeholder]");
+
+            function makePlaceHolder(){
+                placeholder.each(function(i) {
+                    var parHeight = placeholder.eq(i).css("height");
+                    var parLineHeight = placeholder.eq(i).css("lineHeight");
+                    var parPadd = placeholder.eq(i).css("padding");
+                    var parWidth = placeholder.eq(i).css("width");
+                    var parTxtIn = placeholder.eq(i).css("textIndent");
+                    var parColor = placeholder.eq(i).css("color");
+                    var parFontSize = placeholder.eq(i).css("fontSize");
+                    placeholder.eq(i).wrap("<div class='placehold' style='position:relative;color:#555;'></div>");
+                    $(".placehold").eq(i).append("<span>"+placeholder.eq(i).attr("placeholder")+"</span>");
+                    placeholder.eq(i).next().css({
+                            "height":parHeight,
+                            "lineHeight":parLineHeight,
+                            "padding":parPadd,
+                            "width":parWidth,
+                            "textIndent":parTxtIn,
+                            "color":parColor,
+                            "fontSize":parFontSize,
+                            "position":"absolute",
+                            "left":1,
+                            "top":1,
+                            "display":"block"
+                        });
+                });
+            };
+            makePlaceHolder();
+
+            placeholder.each(function(i) {
+                var holderVal=placeholder.eq(i).val().length;
+                if(holderVal==0){
+                    $(this).next("span").show();
+                }
+                placeholder.bind("focusin",function(){
+                    $(this).next("span").hide();
+                    placeholder.not(this).filter(function(index){return $(this).val().length==0}).next("span").show();
+                });
+            });
+
+            $(".placehold span").click(function(){
+                $(this).prev().focus();
+            });
+
+        
+
+
+    });
+    
+    
+</script>  
+</head>
+<body>
+  <div id="wrapper"><!-- wrapper 시작 -->
+    <div id="header"><!-- header 시작 -->    
+        <div id="head_top">
+            <div id="top_left">
+                <ul id="top_sns">
+                    <li><a href="#" title="facebook"><img src="img/facebook-top-icon.png" alt="facebook"/></a></li>
+                    <li><a href="#" title="dribble"><img src="img/top_dribble-icon.png" alt="dribble"/></a></li>
+                    <li><a href="#" title="twitter"><img src="img/top-twitter-icon.png" alt="twitter"/></a></li>
+                    <li><a href="#" title="mail"><img src="img/top-mail-icon.png" alt="mail"/></a></li>
+                    <li><a href="#" title="vimeo"><img src="img/top-vimeo-icon.png" alt="vimeo"/></a></li>
+                </ul>
+            </div>
+            <div id="top_right">
+                <ul>
+                    <li><a href="#" title="login">Login&nbsp;</a></li>
+                    <li><a href="#" title="register">/ Register</a></li>
+                </ul>
+                <div>
+                    <a href="#" title="cart"><img src="img/cart.png" alt="cart"/> Cart (2)</a>
+                </div>
+            </div>
+        </div>   
+        <div id="head_bottom">
+            <div id="logo">
+                <h1><a href="index.html" title="M_store"><img src="img/logo.png" alt="M_store_logo"/></a></h1>
+            </div>
+            <div id="nav">
+                <ul>
+                    <li><a href="#" title="home">HOME</a></li>
+                    <li><a href="#" title="cd&#39;s">CD&#39;s</a></li>
+                    <li><a href="#" title="dvd&#39;s">DVD&#39;s</a></li>
+                    <li><a href="#" title="news">NEWS</a></li>
+                    <li><a href="#" title="portfolio">PORTFOLIO</a></li>
+                    <li><a href="#" title="contact us">CONTACT US</a></li>
+                </ul>
+            </div>
+        </div>   
+    </div><!-- header 끝 -->
+      
+    <div id="content"><!-- content 시작 -->
+        <div id="content_top">
+            <h2>SHOP - FULL WIDTH</h2>
+            <div id="top_logo">
+                <a href="index.html" title="main page"><img src="img/homeHouseIcon.png" alt="main page"/></a>
+            </div>
+            <div><a href="index.html" title="home">Home</a>≫<a href="#" title="shop">shop</a>≫<a href="#" title="full width">full widht</a></div>
+        </div>
+        <div id="content_bottom">
+            <div id="section1">
+                <ul class="box1">
+                    <li><a href="#" title="all">ALL &nbsp;:</a></li>
+                    <li><a href="#" title="rock">:&nbsp; ROCK &nbsp;:</a></li>
+                    <li><a href="#" title="pop">:&nbsp; POP &nbsp;:</a></li>
+                    <li><a href="#" title="metal">:&nbsp; METAL &nbsp;:</a></li>
+                    <li><a href="#" title="dance">:&nbsp; DANCE &nbsp;:</a></li>
+                    <li><a href="#" title="classical">:&nbsp; CLASSICAL</a></li>
+                </ul>
+                <div class="box2">
+                    <div id="box2_txt">
+                        <span>Sort by: </span>
+                        <ul class="box2-1">
+                            <li><a href="#" title="alphabetically">Alphabetically<span class="open">▼</span><span class="close">▲</span></a>
+                                <ul>
+                                    <li><a href="#" title="alphabetically">Alphabetically</a></li>
+                                    <li><a href="#" title="alphabetically">Alphabetically</a></li>
+                                    <li><a href="#" title="alphabetically">Alphabetically</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <ul class="box2-2">
+                        <li><a href="#" title="img 형태로 보기"><img src="img/squares.png" alt="img 형태로 보기"/></a></li>
+                        <li><a href="#" title="list 형태로 보기"><img src="img/list.png" alt="list 형태로 보기"/></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="section2">
+                <div class="text2-1" style="margin-left:0">
+                    <span class="sale"><img src="img/sale.png" alt="sale"/></span>
+                    <img  class="t2_img" src="img/image01.png" alt="aqualung"/>
+                    <dl>
+                        <dt>Aqualung<i>by Artist</i></dt>
+                        <dd><img src="img/rating.png" alt="별점"/></dd>
+                        <dd><b>Lorem ipsum</b>dolor sit amet, con adipiscing elit, sed diam nonu. </dd>
+                        <dd><span class="price">$14.99</span><span class="salePrice">$8.99</span></dd>
+                    </dl>
+                    <div><a href="#" title="to cart">ADD TO CART</a></div>
+                </div>
+                <div class="text2-1">
+                    <img  class="t2_img" src="img/image02.png" alt="Awaken the Hero"/>
+                    <dl>
+                        <dt>Awaken the Hero<i>by Artist</i></dt>
+                        <dd><img src="img/rating.png" alt="별점"/></dd>
+                        <dd><b>Lorem ipsum</b>dolor sit amet, con adipiscing elit, sed diam nonu. </dd>
+                        <dd><span class="price1">$17.59</span></dd>
+                    </dl>
+                    <div><a href="#" title="to cart">ADD TO CART</a></div>
+                </div>
+                <div class="text2-1">
+                    <span class="sale"><img src="img/sale.png" alt="sale"/></span>
+                    <img  class="t2_img" src="img/image03.png" alt="Strange to ears"/>
+                    <dl>
+                        <dt>Strange to ears<i>by Artist</i></dt>
+                        <dd><img src="img/rating.png" alt="별점"/></dd>
+                        <dd><b>Lorem ipsum</b>dolor sit amet, con adipiscing elit, sed diam nonu. </dd>
+                        <dd><span class="price">$14.99</span><span class="salePrice">$8.99</span></dd>
+                    </dl>
+                    <div><a href="#" title="to cart">ADD TO CART</a></div>
+                </div>
+                <div class="text2-1">
+                    <img  class="t2_img" src="img/image04.png" alt="Ravenna"/>
+                    <dl>
+                        <dt>Ravenna<i>by Artist</i></dt>
+                        <dd><img src="img/rating.png" alt="별점"/></dd>
+                        <dd><b>Lorem ipsum</b>dolor sit amet, con adipiscing elit, sed diam nonu. </dd>
+                        <dd><span class="price1">$22.99</span></dd>
+                    </dl>
+                    <div><a href="#" title="to cart">ADD TO CART</a></div>
+                </div>
+                <div class="text2-1" style="margin-left:0">
+                    <span class="sale"><img src="img/sale.png" alt="sale"/></span>
+                    <img  class="t2_img" src="img/image05.png" alt="Caribou"/>
+                    <dl>
+                        <dt>Caribou<i>by Artist</i></dt>
+                        <dd><img src="img/rating.png" alt="별점"/></dd>
+                        <dd><b>Lorem ipsum</b>dolor sit amet, con adipiscing elit, sed diam nonu. </dd>
+                        <dd><span class="price">$14.99</span><span class="salePrice">$8.99</span></dd>
+                    </dl>
+                    <div><a href="#" title="to cart">ADD TO CART</a></div>
+                </div>
+                <div class="text2-1">
+                    <img  class="t2_img" src="img/image06.png" alt="Oh my Deer"/>
+                    <dl>
+                        <dt>Oh my Deer<i>by Artist</i></dt>
+                        <dd><img src="img/rating.png" alt="별점"/></dd>
+                        <dd><b>Lorem ipsum</b>dolor sit amet, con adipiscing elit, sed diam nonu. </dd>
+                        <dd><span class="price1">$14.99</span></dd>
+                    </dl>
+                    <div><a href="#" title="to cart">ADD TO CART</a></div>
+                </div>
+                <div class="text2-1">
+                    <img  class="t2_img" src="img/image07.png" alt="Oh my Deer"/>
+                    <dl>
+                        <dt>Oh my Deer<i>by Artist</i></dt>
+                        <dd><img src="img/rating.png" alt="별점"/></dd>
+                        <dd><b>Lorem ipsum</b>dolor sit amet, con adipiscing elit, sed diam nonu. </dd>
+                        <dd><span class="price1">$8.99</span></dd>
+                    </dl>
+                    <div><a href="#" title="to cart">ADD TO CART</a></div>
+                </div>
+                <div class="text2-1">
+                    <span class="sale"><img src="img/sale.png" alt="sale"/></span>
+                    <img  class="t2_img" src="img/image08.png" alt="Ravenna"/>
+                    <dl>
+                        <dt>Ravenna<i>by Artist</i></dt>
+                        <dd><img src="img/rating.png" alt="별점"/></dd>
+                        <dd><b>Lorem ipsum</b>dolor sit amet, con adipiscing elit, sed diam nonu. </dd>
+                        <dd><span class="price">$14.99</span><span class="salePrice">$8.99</span></dd>
+                    </dl>
+                    <div><a href="#" title="to cart">ADD TO CART</a></div>
+                </div>
+            </div>
+            <div id="section3">
+                <ul>
+                    <li class="clickp"><a href="#" title="1page">1</a></li>
+                    <li><a href="#" title="2page">2</a></li>
+                    <li><a href="#" title="3page">3</a></li>
+                    <li><a href="#" title="4page">4</a></li>
+                    <li><a href="#" title="5page">5</a></li>
+                    <li><a href="#" title="6page">6</a></li>
+                    <li><a href="#" title="page">≫</a></li>
+                </ul>
+            </div>
+        </div>
+    </div><!-- content 끝 -->
+      
+    <div id="top"><a href="#header" title="top">&and;</a></div>
+    <div id="footer"><!-- footer 시작 -->
+        <div id="footer_content">
+            <div id="f_section1">
+                <dl>
+                    <dt class="f_h">Little about us</dt>
+                    <dd><b>Sed posuere</b> consectetur  est at. <br/>
+                    Nulla vitae elit libero, a pharetra.<br/>
+                    Lorem ipsum <b>dolor sit</b> amet, conse<br/>
+                    ctetuer adipiscing elit.</dd>
+                </dl>
+                <p class="f_h">Socialize with us</p>
+                <ul>
+                    <li><a href="#" title="facebook"><img src="img/footer_f.png" alt="facebook"/></a></li>
+                    <li><a href="#" title="twitter"><img src="img/footer_t.png" alt="twitter"/></a></li>
+                    <li><a href="#" title="dribble"><img src="img/footer_d.png" alt="dribble"/></a></li>
+                    <li><a href="#" title="group"><img src="img/footer_g.png" alt="group"/></a></li>
+                    <li><a href="#" title="mail"><img src="img/footer_m.png" alt="mail"/></a></li>
+                </ul>
+            </div>
+            <div id="f_section2">
+                <p class="f_h">Our Archives</p>
+                <ul>
+                    <li><a href="#" title="March 2012">March 2012</a></li>
+                    <li><a href="#" title="February 2012">February 2012</a></li>
+                    <li><a href="#" title="January 2012">January 2012</a></li>
+                    <li><a href="#" title="December 2012">December 2012</a></li>
+                </ul>
+            </div>
+            <div id="f_section3">
+                <p class="f_h">Popular Posts</p>
+                <div class="f3_box">
+                    <img src="img/footer_img01.png" alt="img"/>
+                    <a href="#" title="Great Album">Great Album<br/><img src="img/txt.png" alt=""/><span>12 COMMENTS</span></a>
+                </div>
+                <div class="f3_box">
+                    <img src="img/footer_img02.png" alt="img"/>
+                    <a href="#" title="Great Album">Great Album<br/><img src="img/txt.png" alt=""/><span>12 COMMENTS</span></a>
+                </div>
+            </div>
+            <div id="f_section4">
+                <label class="f_h" for="search">Search our Site</label>
+                <input type="text" name="search" id="search"/>
+                <p class="f_h">Popular Posts</p>
+                <a href="#" title="Audio CD">Audio CD</a>
+                <a href="#" title="Video">Video</a>
+                <a href="#" title="Playlist">Playlist</a>
+                <a href="#" title="Avantgarde">Avantgarde</a>
+                <a href="#" title="Melancholic">Melancholic</a>
+            </div>
+        </div>
+        <div id="footer_bottom">
+            <div class="f_b1">
+                <ul>
+                    <li><a href="index.html" title="home">Home</a></li>
+                    <li><a href="#" title="Portfolio">Portfolio</a></li>
+                    <li><a href="#" title="Sitemap">Sitemap</a></li>
+                    <li><a href="#" title="Contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="f_b2">
+                Musica @2013 by PremiumCoding | All Rights Reserved
+            </div>
+        </div>
+    </div><!-- footer 끝 -->
+      
+      
+      
+      
+  </div><!-- wrapper 끝 -->
+    
+</body>
+</html>
