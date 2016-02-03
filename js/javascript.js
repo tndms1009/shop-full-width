@@ -47,7 +47,13 @@ $(function(){
             });
 
         
-
+    $(window).load(function() {
+       if (window.PIE) {
+          $('.flex-control-paging li a').each(function() {
+             PIE.attach(this);
+           });
+      }
+    });
 
     
     
