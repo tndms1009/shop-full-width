@@ -348,6 +348,7 @@ table{ border-collapse: collapse; }
 #footer #footer_content #f_section2 ul li:last-child{
     border-bottom: none 
 }
+#footer #footer_content #f_section2 ul li a:hover{ font-style: italic; }
 #footer #footer_content #f_section3 div{ margin-top: 10px; }
 #footer #footer_content #f_section3 a{
     width: 130px; 
@@ -355,6 +356,7 @@ table{ border-collapse: collapse; }
     padding:10px 0 0 10px; 
     line-height: 25px; 
 }
+#footer #footer_content #f_section3 a:hover{ text-decoration: underline; }
 #footer #footer_content #f_section3 img{ border: 5px solid #28292a;  }
 #footer #footer_content #f_section3 a img{ vertical-align: middle; }
 #footer #footer_content #f_section4 label{ display: block; }
@@ -375,6 +377,7 @@ table{ border-collapse: collapse; }
     margin: 4px 2px; 
     background-color:#28292a;
 }
+#footer #footer_content #f_section4 a:hover{ background-color:#444; }
 .placehold{position:relative; color:#555;}
 .placehold >span {
     position:absolute;
