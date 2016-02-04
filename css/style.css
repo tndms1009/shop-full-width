@@ -300,13 +300,14 @@ table{ border-collapse: collapse; }
 
 /* top 버튼  */
 #top{ 
-    position: absolute; 
-    margin-top: -20px; 
-    right: 30px; 
+     
 }
 #top a{
     width: 35px; 
     height: 35px; 
+    margin-top: -20px; 
+    right: 30px;
+    position: absolute; 
     background-color: #CC3333;
     color:#fff;
     line-height: 35px; 
