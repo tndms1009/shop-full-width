@@ -77,11 +77,6 @@ table{ border-collapse: collapse; }
     margin-top: 20px; 
     margin-bottom: 20px; 
 }
-#header #head_bottom #logo a{
-    position: relative;
-    display: inline-block; 
-    z-index: 300;
-}
 #header #head_bottom #nav{
     position: absolute;
     top:20px; 
@@ -243,7 +238,6 @@ table{ border-collapse: collapse; }
     line-height: 20px; 
     margin: 15px 0; 
 }
-#content #section2 .text2-1 dd b{ margin-right: 5px; }
 #content #section2 .text2-1 dd .price{
     font-size: 15px; 
     font-weight: 700; 
@@ -298,7 +292,6 @@ table{ border-collapse: collapse; }
     color:#cc3333;
 }
 #content #section3 ul li a{ padding: 5px;}
-#content #section3 ul li a:hover{ text-decoration: underline;}
 #content #section3 ul:after{
     content:"";
     display: block; 
